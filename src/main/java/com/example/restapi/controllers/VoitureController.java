@@ -20,7 +20,8 @@ public class VoitureController {
 
     @GetMapping
     public ResponseEntity<List<Voiture>> getAllBatterie() {
-        String jdbcUrl = "jdbc:mysql://bdd:3306/Tesla?autoReconnect=true&useSSL=false";
+        String bdd_host = System.getenv("MYSQL_HOST");
+        String jdbcUrl = "jdbc:mysql://" + bdd_host + ":3306/Tesla?autoReconnect=true&useSSL=false";
         String username = System.getenv("MYSQL_USERNAME");
         String password = System.getenv("MYSQL_ROOT_PASSWORD");
 
