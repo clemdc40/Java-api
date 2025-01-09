@@ -41,7 +41,6 @@ public class VoitureController {
                 // Ajouter un objet Voiture à la liste
                 voitures.add(new Voiture(batterie, heure, temperature));
             }
-
         } catch (SQLException e) {
             System.err.println("Erreur lors de la récupération des données : " + e.getMessage());
             e.printStackTrace();
