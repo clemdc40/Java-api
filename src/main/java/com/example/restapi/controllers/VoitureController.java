@@ -21,9 +21,9 @@ public class VoitureController {
     @GetMapping
     public ResponseEntity<List<Voiture>> getAllBatterie() {
         String bdd_host = System.getenv("MYSQL_HOST");
-        String jdbcUrl = "jdbc:mysql://" + bdd_host + ":3306/Tesla?autoReconnect=true&useSSL=false";
-        String username = System.getenv("MYSQL_USERNAME");
-        String password = System.getenv("MYSQL_ROOT_PASSWORD");
+        String jdbcUrl = "jdbc:mysql://bdd:3306/Tesla?autoReconnect=true&useSSL=false";
+        String username = "root";
+        String password = "root";
 
         String selectQuery = "SELECT batterie, heure, temperature FROM teslainfo";
         List<Voiture> voitures = new ArrayList<>();
